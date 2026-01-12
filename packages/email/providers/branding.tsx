@@ -11,11 +11,11 @@ type BrandingContextValue = {
 const BrandingContext = createContext<BrandingContextValue | undefined>(undefined);
 
 const defaultBrandingContextValue: BrandingContextValue = {
-  brandingEnabled: false,
+  brandingEnabled: true,
   brandingUrl: '',
   brandingLogo: '',
   brandingCompanyDetails: '',
-  brandingHidePoweredBy: false,
+  brandingHidePoweredBy: true,
 };
 
 export const BrandingProvider = (props: {
@@ -23,7 +23,7 @@ export const BrandingProvider = (props: {
   children: React.ReactNode;
 }) => {
   return (
-    <BrandingContext.Provider value={props.branding ?? defaultBrandingContextValue}>
+    <BrandingContext.Provider value={defaultBrandingContextValue}>
       {props.children}
     </BrandingContext.Provider>
   );
