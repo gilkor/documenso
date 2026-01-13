@@ -1,0 +1,25 @@
+:root, .dark:not(.dark-mode-disabled) {
+  --primary: 207deg 100% 20%;
+  --primary-foreground: 0deg 0% 100%;
+
+  --accent: 0deg 0% 64% / 9%;
+  --accent-foreground: 212deg 5% 45%;
+
+  --destructive: 4deg 90% 58%;
+  --destructive-foreground: var(--primary-foreground);
+
+  --ring: var(--primary);
+}
+
+:root {
+
+}
+
+.dark:not(.dark-mode-disabled) {
+  --secondary: var(--primary);
+  --secondary-foreground: var(--primary-foreground);
+}
+
+.text-\[\#7AC455\] {
+  color: hsla(var(--primary), var(--tw-text-opacity));
+}
