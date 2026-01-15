@@ -1,3 +1,25 @@
+/* Inter Variable Fonts */
+@font-face {
+  font-family: "Neue Haas";
+  src: url("/fonts/NeueHaasDisplay-Mediu.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap
+}
+
+@font-face {
+  font-family: "Avenir Regular";
+  src: url("/fonts/Avenir-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap
+}
+
+:root {
+  --font-sans: "Avenir Regular", 'Inter';
+  --font-titleize: "Neue Haas";
+}
+
 :root, .dark:not(.dark-mode-disabled) {
   --primary: 207deg 100% 20%;
   --primary-foreground: 0deg 0% 100%;
@@ -11,10 +33,6 @@
   --ring: var(--primary);
 }
 
-:root {
-
-}
-
 .dark:not(.dark-mode-disabled) {
   --secondary: var(--primary);
   --secondary-foreground: var(--primary-foreground);
@@ -22,4 +40,9 @@
 
 .text-\[\#7AC455\] {
   color: hsla(var(--primary), var(--tw-text-opacity));
+}
+
+button, a,
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-titleize);
 }
