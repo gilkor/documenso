@@ -155,13 +155,13 @@ export const DocumentAttachmentsPopover = ({
                   key={attachment.id}
                   className="border-border flex items-center justify-between rounded-md border p-2"
                 >
-                  <div className="min-w-0 flex-1">
+                  <div className="min-w-0 flex-1 flex-col">
                     <p className="truncate text-sm font-medium">{attachment.label}</p>
                     <a
                       href={attachment.data}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-muted-foreground hover:text-foreground truncate text-xs underline"
+                      className="text-muted-foreground hover:text-foreground truncate text-xs underline text-overflow block"
                     >
                       {attachment.data}
                     </a>
@@ -194,6 +194,7 @@ export const DocumentAttachmentsPopover = ({
 
           {isAdding && (
             <Form {...form}>
+              <hr className="my-4" />
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-3">
                 <FormField
                   control={form.control}

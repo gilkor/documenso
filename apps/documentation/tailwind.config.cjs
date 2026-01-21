@@ -14,7 +14,7 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      sans: ['Inter', 'sans-serif'],
+      sans: ['Avenir Regular', 'Inter', 'sans-serif'],
       serif: ['Caveat', 'cursive'],
     },
   },

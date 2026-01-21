@@ -88,35 +88,6 @@ export const DocumentShareButton = ({
     setIsOpen(false);
   };
 
-  const onTweetClick = async () => {
-    let { slug = '' } = shareLink || {};
-
-    if (!slug) {
-      const result = await createOrGetShareLink({
-        token,
-        documentId,
-      });
-
-      slug = result.slug;
-    }
-
-    // Ensuring we've prewarmed the opengraph image for the Twitter
-    await fetch(`${NEXT_PUBLIC_WEBAPP_URL()}/share/${slug}/opengraph`, {
-      // We don't care about the response, so we can use no-cors
-      mode: 'no-cors',
-    });
-
-    window.open(
-      generateTwitterIntent(
-        `I just ${token ? 'signed' : 'sent'} a document in style with @documenso. Check it out!`,
-        `${NEXT_PUBLIC_WEBAPP_URL()}/share/${slug}`,
-      ),
-      '_blank',
-    );
-
-    setIsOpen(false);
-  };
-
   return (
     <Dialog open={isOpen} onOpenChange={onOpenChange}>
       <DialogTrigger onClick={(e) => e.stopPropagation()} asChild>
@@ -183,11 +154,6 @@ export const DocumentShareButton = ({
           </div>
 
           <div className="mt-6 flex items-center gap-4">
-            <Button variant="outline" className="flex-1" onClick={onTweetClick}>
-              <FaXTwitter className="mr-2 h-4 w-4" />
-              Tweet
-            </Button>
-
             <Button variant="outline" className="flex-1" onClick={onCopyClick}>
               <Copy className="mr-2 h-4 w-4" />
               <Trans>Copy Link</Trans>

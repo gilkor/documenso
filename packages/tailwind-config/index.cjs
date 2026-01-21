@@ -111,7 +111,7 @@ module.exports = {
         green: {
           DEFAULT: '#41B691',
           50: '#DEF3E7',
-          100: '#B6E4D1',
+          100: '#c9e8db',
           200: '#B6E4D1',
           300: '#86D1B7',
           400: '#5EC1A1',

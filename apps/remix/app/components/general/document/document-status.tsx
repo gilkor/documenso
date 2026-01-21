@@ -71,7 +71,7 @@ export const DocumentStatus = ({
   const { label, icon: Icon, color } = FRIENDLY_STATUS_MAP[status];
 
   return (
-    <span className={cn('flex items-center', className)} {...props}>
+    <span className={cn('flex items-center', color, className)} {...props}>
       {Icon && (
         <Icon
           className={cn('mr-2 inline-block h-4 w-4', {
