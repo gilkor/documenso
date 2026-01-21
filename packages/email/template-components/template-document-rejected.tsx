@@ -39,7 +39,7 @@ export function TemplateDocumentRejected({
 
       <Button
         href={documentUrl}
-        className="inline-flex items-center justify-center rounded-lg bg-documenso-500 px-6 py-3 text-center text-sm font-medium no-underline"
+        className="inline-flex items-center justify-center rounded-lg bg-documenso-500 text-[#FFFFFF] px-6 py-3 text-center text-sm font-medium no-underline"
       >
         <Trans>View Document</Trans>
       </Button>

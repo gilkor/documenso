@@ -91,7 +91,7 @@ export const TemplateDocumentInvite = ({
 
         <Section className="mb-6 mt-8 text-center">
           <Button
-            className="text-sbase inline-flex items-center justify-center rounded-lg bg-documenso-500 px-6 py-3 text-center font-medium no-underline"
+            className="text-sbase inline-flex items-center justify-center rounded-lg text-[#FFFFFF] bg-documenso-500 px-6 py-3 text-center font-medium no-underline"
             href={signDocumentLink}
           >
             {match(role)
