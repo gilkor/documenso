@@ -102,7 +102,6 @@ export default function DocumentEditPage() {
             <DocumentStatus
               inheritColor
               status={document.status}
-              className="text-muted-foreground"
             />
 
             {recipients.length > 0 && (

@@ -118,7 +118,6 @@ export default function DocumentPage({ params }: Route.ComponentProps) {
             <DocumentStatusComponent
               inheritColor
               status={envelope.status}
-              className="text-muted-foreground"
             />
 
             {envelope.recipients.length > 0 && (
